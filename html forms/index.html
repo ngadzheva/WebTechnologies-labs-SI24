@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Регистрационна форма</title>
+    </head>
+    <body>
+        <header>
+            <h1>Регистрация</h1>
+        </header>
+
+        <main>
+            <form method="POST">
+                <fieldset>
+                    <legend>Потребителски данни</legend>
+                    <label>
+                        Потребителско име
+                        <input type="text" name="username" id="username" autofocus minlength="3"/>
+                    </label>
+    
+                    <br/>
+    
+                    <label for="password">Парола</label>
+                    <input type="password" name="password" id="password" pattern="[a-zA-Z0-9]{3,10}"/>
+    
+                    <br/>
+    
+                    <label for="confirm-password">Потвърждаване на парола</label>
+                    <input type="password" name="confrm-password" id="confrm-password"/>
+    
+                    <br/>
+    
+                    <label for="email">Имейл</label>
+                    <input type="email" name="email" id="email" placeholder="a@a.com" required/>
+    
+                    <br/>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Лични данни</legend>
+                    <label>
+                        Име
+                        <input type="text" name="name" id="name"/>
+                    </label>
+    
+                    <br/>
+    
+                    <label>
+                        Фамилия
+                        <input type="text" name="surname" id="surname"/>
+                    </label>
+    
+                    <br/>
+    
+                    <label>Година на раждане</label>
+                    <select name="year-of-birth">
+                        <option value="95">1995</option>
+                        <option value="96" selected>1996</option>
+                        <option value="97">1997</option>
+                        <option value="98" selected>1998</option>
+                        <option value="99">1999</option>
+                        <option value="00">2000</option>
+                        <option value="01">2001</option>
+                        <option value="02">2002</option>
+                        <option value="03">2003</option>
+                        <option value="04">2004</option>
+                        <option value="05">2005</option>
+                    </select>
+
+                    <br/>
+
+                    <label>Пол</label>
+                    <br/>
+                    <label for="gender-m">Мъж</label>
+                    <input type="radio" name="gender" id="gender-m" value="M"/>
+                    <label for="gender-f">Жена</label>
+                    <input type="radio" name="gender" id="gender-f" value="F"/>
+
+                    <br/>
+                    <label>18+</label>
+                    <br/>
+                    <label>Да</label>
+                    <input type="radio" name="18+" value="Yes"/>
+                    <label>Не</label>
+                    <input type="radio" name="18+" value="No"/>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Образование</legend>
+
+                    <label>Средно</label>
+                    <input type="checkbox" name="education-high-school" value="high-school"/>
+                    <label>Бакалавър</label>
+                    <input type="checkbox" name="education-bachelor" value="bachelor"/>
+                    <label>Магистър</label>
+                    <input type="checkbox" name="education-master" value="master"/>
+
+                    <br/>
+
+                    <label>Описание на специалности</label>
+                    <br/>
+                    <textarea placeholder="Описание на заършени специалности" rows="4" cols="50">ПМГ</textarea>
+                </fieldset>
+
+                <!-- <button>Регистрирай</button> -->
+                <!-- <input type="submit" value="Регистрирай" /> -->
+            </form>
+        </main>
+    </body>
+</html>
