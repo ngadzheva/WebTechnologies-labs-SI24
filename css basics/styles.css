@@ -1,0 +1,101 @@
+/* p {
+    font-size: 20px;
+    color: red;
+}
+
+#p1 {
+    color: green;
+}
+
+p {
+    color: blue;
+}
+
+.author {
+    color: yellow;
+}
+
+section h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#article1 > h2 {
+    color: orange;
+}
+
+article h2 {
+    font-size: 24px;
+    font-style: italic;
+    color: violet;
+}
+
+h2 {
+    color: tomato;
+}
+
+article:first-child {
+    width: 500px;
+    border: 1px solid black;
+}
+
+#article1 > p:first-child {
+    text-transform: uppercase;
+}
+
+p:last-child {
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+section:nth-child(2n) {
+    width: 250px;
+    border: 3px dashed gray;
+}
+
+div:first-of-type {
+    border-bottom: 2px dotted black;
+    width: 250px;
+}
+
+h2 ~ .copyright {
+    background-color: aqua;
+    width: 150px;
+}
+
+h2 + .copyright {
+    border: 4px ridge orange;
+}
+
+span {
+    color:pink;
+    text-transform:capitalize;
+    display: block;
+}
+
+p {
+    display: inline;
+} */
+
+body {
+    font-size: 22px;
+}
+
+article {
+    color: red;
+}
+
+div.copyright {
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+#article1 {
+    width: 500px;
+    border: 2px dotted gray;
+    /* box-sizing: content-box; */
+}
+
