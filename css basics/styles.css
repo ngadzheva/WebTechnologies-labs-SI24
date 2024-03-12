@@ -91,11 +91,46 @@ div.copyright {
     margin: 20px;
     border: 1px solid black;
     box-sizing: content-box;
+    /* position: absolute;
+    top: 100px; */
+    /* float: right; */
+    background: yellow;
 }
+
+#article3 {
+    position: relative;
+    background-color: antiquewhite;
+    z-index: 2;
+}
+
+/* #article1::after {
+    content: '';
+    display: block;
+    clear: both;
+} */
 
 #article1 {
     width: 500px;
     border: 2px dotted gray;
     /* box-sizing: content-box; */
+    position: relative;
+    overflow-y: auto;
+    height: 200px;
+}
+
+nav {
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 0;
+}
+
+h1:first-of-type {
+    position: relative;
+    visibility: hidden;
+    /* display: none; */
+}
+
+h1:first-of-type:hover {
+    cursor: pointer;
 }
 
