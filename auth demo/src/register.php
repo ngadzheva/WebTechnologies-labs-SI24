@@ -36,16 +36,17 @@
                     $errors[] = 'Confirm password must match password';
                 } else {
                     $user = new User($username, $password);
+                    $userData = $user->exists();
 
-                    if ($user['success']) {
-                        if ($user['data']) {
+                    if ($userData['success']) {
+                        if ($userData['data']) {
                             $errors[] = 'User already exists';
                         } else {
                             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                             $user->createUser($passwordHash, $email);
                         }
                     } else {
-                        $server_errors = $user['error'];
+                        $server_errors = $userData['error'];
                     }
                 }
             }

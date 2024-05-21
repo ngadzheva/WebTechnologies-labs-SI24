@@ -31,8 +31,8 @@
         public function exists() {
             $userResult = $this->db->selectUserQuery(['username' => $this->username]);
 
-            if ($userResult) {
-                $user = $userResult->fetch();
+            if ($userResult["success"]) {
+                $user = $userResult["data"]->fetch();
 
                 return ['success' => true, 'data' => $user];
             }
@@ -41,10 +41,15 @@
         }
 
         public function isValid($password, $passwordHash) {
+            return password_verify($password, $passwordHash);
         }
 
         public function createUser($passwordHash, $email) {
             $result = $this->db->insertUserQuery(['username' => $this->username, 'password' => $passwordHash, 'email' => $email]);
+        }
+
+        public function getUserById($userId) {
+            return $this->db->selectUserByIdQuery(['id' => $userId])['data']->fetch();
         }
     }
 ?>

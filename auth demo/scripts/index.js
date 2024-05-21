@@ -12,6 +12,7 @@
      logoutBtn.addEventListener('click', logout);
   
     // TODO: Send request for getting all students' marks
+    sendRequest('./src/index.php', { method: 'GET' }, loadStudents, handleError)
   })();
   
   function sendForm(event) {
@@ -45,9 +46,12 @@
   }
   
   function loadStudents(studentsData) {
+    console.log(studentsData);
   }
   
   function handleError(errors) {
+    console.error(errors);
+    window.location = './login.html';
   }
   
   /**
@@ -62,8 +66,9 @@
     /**
      * Send GET request to api.php/logout to logout the user
      */
+    sendRequest('./src/logout.php', { method: 'GET' }, redirect, handleError);
   }
   
   function redirect() {
-
+    window.location = './login.html';
   }

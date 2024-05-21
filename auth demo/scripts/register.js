@@ -56,6 +56,7 @@
   * @param {*} response
   */
   function load(response) {
+    var errorsLabel = document.getElementById('errors');
     errorsLabel.innerHTML = '';
 
     window.location = './login.html';
@@ -66,7 +67,7 @@
     
     errorsLabel.innerHTML = errors.toString();
 
-    errors.style.color = 'red';
-    errors.style.display = 'block';
+    errorsLabel.style.color = 'red';
+    errorsLabel.style.display = 'block';
 
   }

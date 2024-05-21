@@ -39,6 +39,12 @@ function sendForm(event) {
     /**
      * Send POST request with user's data to api.php/login
      */
+    var options = {
+        method: 'POST',
+        data: `data=${JSON.stringify(user)}`
+      };
+  
+    sendRequest('./src/login.php', options, load, handleError);
 }
 
 /**
@@ -48,7 +54,14 @@ function sendForm(event) {
  * @param {*} response
  */
 function load(response) {
+    window.location = './index.html';
 }
 
 function handleError(errors) {
+    var errorsLabel = document.getElementById('errors');
+    
+    errorsLabel.innerHTML = errors.toString();
+
+    errorsLabel.style.color = 'red';
+    errorsLabel.style.display = 'block';
 }
